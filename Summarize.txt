@@ -1,0 +1,10 @@
+------------    Presentation    ------------
+
+We will learn how to improve our code in C# following the best standards in the Software Development industry.
+
+We will use code that already exists and works, but does not have best practices. Therefore, we will modify the code so that it meets the best standards of good practices but without affecting the functionality of the application.
+
+At the end of the course we will have a very different code but it will work exactly the same, so the user should not notice the changes we make.
+
+
+https://en.wikipedia.org/wiki/Characterization_test
