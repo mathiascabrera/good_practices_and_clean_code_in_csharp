@@ -8,3 +8,96 @@ At the end of the course we will have a very different code but it will work exa
 
 
 https://en.wikipedia.org/wiki/Characterization_test
+
+
+
+
+
+
+
+
+
+------------    Prerequisites    ------------
+
+- Knowledge in C# and .NET.
+
+- Knowledge at Git.
+
+- Visual Code or Visual Studio
+
+- .NET 6 or superior.
+
+
+
+
+
+
+
+
+
+------------    Terminology - Good practices, refactoring, clean code, technical debt    ------------
+
+Terminology:
+
+- Best Practices : 
+
+ Good practices are proven and verified standards.
+ 
+ Good practices solve challenges based on common scenarios.
+ 
+ They provide guides that are easy to learn and understand.
+ 
+ They allow having a similar structure for multiple projects.
+ 
+ "The good practices we will learn will also be useful for many other languages."
+ 
+ 
+ - Clean Code :
+ 
+ It is a code that follows good practices. Allowing the reduction of the code and making it better readable.
+ 
+ Easy to understand and analyze code
+ 
+ Easy to maintain code
+ 
+ Easy to update code.
+ 
+ Easy to scale code.
+
+
+
+
+How do we get a Clean Code?.
+
+There are different techniques to obtain a Clean Code, among them we can highlight the following:
+
+* Keep the coupling low. It refers to the use of abstract types, abstract classes and Interfaces, avoiding direct dependencies between system components.
+
+* Use simple and modern syntax
+
+* Avoid incorporating many third-party libraries.
+
+* Distribution of responsibilities
+
+* Creation of small components.
+
+
+- Technical Debt:
+
+ It refers to the technical problems that the software may have that are acquired during the development phase and that must be solved in the future.
+  
+ It can be present in any aspect of an application such as: Security, Performance, Scalability, etc.
+ 
+ Sometimes it can be more expensive than the development itself.
+
+
+
+- Refactoring:
+
+ Process of changes to a code for improvement in any aspect (performance, security, readability, support, etc.).
+ 
+ The most important thing is to make the changes while maintaining the business logic without affecting it.
+  
+ It must be recurring.
+ 
+ Reduces future technical debt.
