@@ -101,3 +101,20 @@ There are different techniques to obtain a Clean Code, among them we can highlig
  It must be recurring.
  
  Reduces future technical debt.
+ 
+
+
+
+
+
+
+
+
+------------    Download and analysis of the project to work on    ------------
+
+The downloaded project works correctly, but contains bad practices.
+
+We must modify part of the code applying good practices but without altering the operation.
+La funcionalidad del proyecto descargado es la de agregar, eliminar y mostrar tareas.
+
+We run the command "dotnet build" to compile and "dotnet run" to run the project.
