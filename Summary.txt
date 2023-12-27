@@ -118,3 +118,67 @@ We must modify part of the code applying good practices but without altering the
 La funcionalidad del proyecto descargado es la de agregar, eliminar y mostrar tareas.
 
 We run the command "dotnet build" to compile and "dotnet run" to run the project.
+
+
+
+
+
+
+
+
+
+------------    Appointment    ------------
+
+° VARIABLES
+
+- Bad of naming of variables:
+int d,a,bgt,rec;
+
+
+- Correct naming of variables :
+int daySinceModification;
+
+
+"Variable names should be as describable as possible."
+
+
+
+° METHODS
+
+- Bad naming of methods:
+public List<Users> getUsers(){}
+
+
+
+- Correct naming of methods (Pascal Case):
+public List<Users> GetActiveUsers(){}
+
+
+"Method names should follow the "Pascal Case" style".
+
+Pascal Case notation consists of beginning each word with a capital letter, while the rest of the words must be lowercase.
+
+
+
+° CLASS
+
+- Class misnomer:
+public class ClassUser2
+
+
+- Correct naming of classes:
+public class User
+
+"The word 'Class' should not be used when naming a Class. This is called Hungarian Notation, it is used in older languages. It is also very bad practice to use numbers in Class naming, perhaps in some cases it could be used for Variable naming, but it is not good practice to use it in Class and Method naming."
+
+
+If we have different 'Users', we can look for words to differentiate one from another, for example 'DefaultUser' or 'CustomUser' and thus differentiate them from the 'User' of the main Class.
+
+
+Sources:
+
+https://mteheran.dev/buenas-practicas-al-nombrar-variables-en-c/
+https://www.neoguias.com/tipos-notacion-nombres/#Pascal_Case_ContarElementos
+
+
+We go to the code to apply these Good Practices.
