@@ -179,6 +179,41 @@ Sources:
 
 https://mteheran.dev/buenas-practicas-al-nombrar-variables-en-c/
 https://www.neoguias.com/tipos-notacion-nombres/#Pascal_Case_ContarElementos
+https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
 
 
 We go to the code to apply these Good Practices.
+
+
+
+
+
+
+
+
+
+------------    Code Smells (Algo huele mal)    ------------
+
+The concept of "Code Smells" occurs when we analyze our code and feel that something in the code is wrong.
+
+When we see some code we should feel that feeling that something is not right.
+
+We have already seen one of the "Codes Smells" : The appointment.
+
+Another "Code Smells" is having very large methods and classes. Although there is no standard for how many lines a Class or Method can have, if a Class exceeds one thousand lines or fifteen hundred lines it is because that Class has many responsibilities and could divide or distribute those responsibilities among other Classes or Components.
+
+Another "Code Smell" occurs when too many parameters are used, this means that there is too much logic in that function and then something is wrong.
+
+Another "code smell" occurs with magic numbers. It is when numbers are used directly in the code, this is called “Hard Code”, and we do not know what their functions are. This is bad practice because it does not help the developer understand what is being done in the code, so they must perform code analysis to discern it.
+
+There are other Code Smells, we have simply named a few of them.
+
+Of all the Code Smells we've seen, the only one that applies to our code is magic numbers, because the project is quite small.
+
+Let's go to our code and check the magic numbers code smell.
+
+Other sources:
+
+https://www.c-sharpcorner.com/UploadFile/3ab935/how-does-your-code-smell/
+https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/code-smell/
+https://rules.sonarsource.com/csharp/type/Code%20Smell/
