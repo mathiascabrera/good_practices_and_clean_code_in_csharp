@@ -217,3 +217,33 @@ Other sources:
 https://www.c-sharpcorner.com/UploadFile/3ab935/how-does-your-code-smell/
 https://www.ionos.es/digitalguide/paginas-web/desarrollo-web/code-smell/
 https://rules.sonarsource.com/csharp/type/Code%20Smell/
+
+
+
+
+
+
+
+
+
+------------    DRY Principle    ------------
+
+DRY : Don´t Repeat Yourself.
+
+Principle that consists of avoiding code repetition.
+
+The intention is to reuse the code.
+
+The reason this mistake is often made is that we are constantly copying and pasting code.
+
+Copying and pasting code is not bad, but we must understand how it works to know how to adapt it to our project and in this way reuse it in different parts.
+
+Typically, there are two ways to duplicate code:
+
+Sometimes we have exactly duplicate sections of code.
+We could just reuse in a function.
+
+On other occasions there are small code routines that are very similar but separate. When we have this type of routines we must find a way to create a common routine or function in which we can define different behaviors through parameters.
+In this way we would no longer have three or four different functions, but only one that will be in charge of doing what the three did through different parameters.
+
+Let's go to our code and we apply this principle DRY.
