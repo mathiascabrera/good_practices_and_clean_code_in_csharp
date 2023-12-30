@@ -278,3 +278,33 @@ Other sources:
 
 https://medium.com/swlh/is-using-linq-in-c-bad-for-performance-318a1e71a732
 https://markheath.net/post/linq-performance#:~:text=It%20is%20slightly%20slower&text=LINQ%20syntax%20is%20typically%20less,like%20BenchmarkDotNet%20to%20do%20so
+
+
+
+
+
+
+
+
+
+------------    Using Try Catch    ------------
+
+We will learn the proper use of the Try Catch. 
+
+We use it when we have exceptional cases or unexpected errors that could occur. With Try Catch we catch errors and then do something additional.
+
+It is a good practice to use try catch in our code.
+
+We implement it when we want to return a specific value after performing the check.
+
+The try catch affects the performance of the application.
+
+If possible, we should use validations instead of Try Catches.
+
+Let's go to the code and see how we can use try catch in the best possible way.
+
+
+It is not good practice to have an empty catch, which does not return anything or notify the user that an error has occurred, nor does it store the error in any log so that developers are aware of errors.
+
+
+In the next class we will analyze the improvements in C# and how these improvements in the language's syntax can help us minimize the code, allowing the code to be much more readable.

@@ -62,15 +62,24 @@ namespace ToDo
                 //string taskNumberToDelete = Console.ReadLine();
                 // Remove one position
                 int indexToRemove = Convert.ToInt32(Console.ReadLine()) - 1;
-                if (indexToRemove > -1 && TaskList.Count > 0)
+
+                if (indexToRemove > (TaskList.Count - 1) || indexToRemove < 0)
                 {
-                    string taskToRemove = TaskList[indexToRemove];
-                    TaskList.RemoveAt(indexToRemove);
-                    Console.WriteLine("Tarea " + taskToRemove + " eliminada");
+                    Console.WriteLine("El número de tarea ingresado no es válido.");
+                }
+                else
+                {
+                    if (indexToRemove > -1 && TaskList.Count > 0)
+                    {
+                        string taskToRemove = TaskList[indexToRemove];
+                        TaskList.RemoveAt(indexToRemove);
+                        Console.WriteLine("Tarea " + taskToRemove + " eliminada");
+                    }
                 }
             }
             catch (Exception)
             {
+                Console.WriteLine("Ha ocurrido un error al intentar eliminar la tarea.");
             }
         }
 
@@ -80,11 +89,20 @@ namespace ToDo
             {
                 Console.WriteLine("Ingrese el nombre de la tarea: ");
                 string newTask = Console.ReadLine();
-                TaskList.Add(newTask);
-                Console.WriteLine("Tarea registrada");
+
+                if (string.IsNullOrEmpty(newTask))
+                {
+                    Console.WriteLine("No se ha ingresado ningún nombre.");
+                }
+                else
+                {
+                    TaskList.Add(newTask);
+                    Console.WriteLine("Tarea registrada");
+                }
             }
             catch (Exception)
             {
+                Console.WriteLine("Ha ocurrido un error al intentar ingresar la tarea.");
             }
         }
 
@@ -98,8 +116,8 @@ namespace ToDo
             {
                 Console.WriteLine("----------------------------------------");
                 var indexTask = 0;
-                TaskList.ForEach(p=> Console.WriteLine(++indexTask + ". " + p));
-                
+                TaskList.ForEach(p => Console.WriteLine(++indexTask + ". " + p));
+
                 Console.WriteLine("----------------------------------------");
             }
         }
