@@ -11,25 +11,27 @@ namespace ToDo
         {
             TaskList = new List<string>();
             int menuSelected = 0;
-            
+
             /* Numbers are usually used to condition, as is our case, numbers are also usually used to perform calculations, for these scenarios the ideal is to use constants with descriptive names.
             For our code, the ideal is that we have an enumeration.  */
+
             do
             {
                 menuSelected = ShowMainMenu();
-                if ((Menu) menuSelected ==  Menu.Add)
+
+                if ((Menu)menuSelected == Menu.Add)
                 {
                     ShowMenuAdd();
                 }
-                else if ((Menu) menuSelected ==  Menu.Remove)
+                else if ((Menu)menuSelected == Menu.Remove)
                 {
                     ShowMenuRemove();
                 }
-                else if ((Menu) menuSelected ==  Menu.List)
+                else if ((Menu)menuSelected == Menu.List)
                 {
                     ShowMenuTaskList();
                 }
-            } while ((Menu) menuSelected ==  Menu.Exit);
+            } while ((Menu)menuSelected != Menu.Exit);
         }
         /// <summary>
         /// Show the main menu 
@@ -45,8 +47,8 @@ namespace ToDo
             Console.WriteLine("4. Salir");
 
             // Read line
-            string chosenOption = Console.ReadLine();
-            return Convert.ToInt32(chosenOption);
+            string menuSelected = Console.ReadLine();
+            return Convert.ToInt32(menuSelected);
         }
 
         public static void ShowMenuRemove()
@@ -57,17 +59,14 @@ namespace ToDo
                 // Show current taks
                 ShowMenuTaskList();
 
-                string chosenOption = Console.ReadLine();
+                //string taskNumberToDelete = Console.ReadLine();
                 // Remove one position
-                int indexToRemove = Convert.ToInt32(chosenOption) - 1;
-                if (indexToRemove > -1)
+                int indexToRemove = Convert.ToInt32(Console.ReadLine()) - 1;
+                if (indexToRemove > -1 && TaskList.Count > 0)
                 {
-                    if (TaskList.Count > 0)
-                    {
-                        string task = TaskList[indexToRemove];
-                        TaskList.RemoveAt(indexToRemove);
-                        Console.WriteLine("Tarea " + task + " eliminada");
-                    }
+                    string taskToRemove = TaskList[indexToRemove];
+                    TaskList.RemoveAt(indexToRemove);
+                    Console.WriteLine("Tarea " + taskToRemove + " eliminada");
                 }
             }
             catch (Exception)
@@ -94,19 +93,19 @@ namespace ToDo
             if (TaskList == null || TaskList.Count == 0)
             {
                 Console.WriteLine("No hay tareas por realizar");
-            } 
+            }
             else
             {
                 Console.WriteLine("----------------------------------------");
-                for (int i = 0; i < TaskList.Count; i++)
-                {
-                    Console.WriteLine((i + 1) + ". " + TaskList[i]);
-                }
+                var indexTask = 0;
+                TaskList.ForEach(p=> Console.WriteLine(++indexTask + ". " + p));
+                
                 Console.WriteLine("----------------------------------------");
             }
         }
     }
-    public enum Menu{
+    public enum Menu
+    {
         Add = 1,
         Remove = 2,
         List = 3,

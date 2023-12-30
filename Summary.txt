@@ -247,3 +247,34 @@ On other occasions there are small code routines that are very similar but separ
 In this way we would no longer have three or four different functions, but only one that will be in charge of doing what the three did through different parameters.
 
 Let's go to our code and we apply this principle DRY.
+
+
+
+
+
+
+
+
+
+------------    KISS Principle    ------------
+
+Keep it Simple Stupid.
+
+We must try to simplify our code as much as possible, without creating many components.
+
+We have to start dividing responsibilities, this is part of Good Practices, but many times we complicate things unnecessarily and obtain what is called “Over-Architecture”.
+
+This happens when we design our application too large or complex to solve a problem that is extremely simple.
+
+We must always apply the best solution depending on the complexity of the problem.
+When the problem is complex then the solutions will be complex, but if the problem is simple then we must apply a fairly simple solution.
+
+This principle is also known as “Keep It Short and Simple”, in this way we can mention this principle a little more harmonious.
+
+Let´s go to our code and we apply this principle.
+
+
+Other sources:
+
+https://medium.com/swlh/is-using-linq-in-c-bad-for-performance-318a1e71a732
+https://markheath.net/post/linq-performance#:~:text=It%20is%20slightly%20slower&text=LINQ%20syntax%20is%20typically%20less,like%20BenchmarkDotNet%20to%20do%20so
