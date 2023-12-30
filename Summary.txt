@@ -308,3 +308,193 @@ It is not good practice to have an empty catch, which does not return anything o
 
 
 In the next class we will analyze the improvements in C# and how these improvements in the language's syntax can help us minimize the code, allowing the code to be much more readable.
+
+
+
+
+
+
+
+
+
+------------    Evolution of C#    ------------
+
+* "Auto Property Initializer" - C# V6
+
+It allows us to add a default value to a property within a Class, saving us a line of code.
+
+
+Example:
+public string MyVar {get; set;} = "Hellow World";
+
+
+
+* "String Interpolation" - C# V6
+
+Existing in other programming languages.
+
+It allows us to use a syntax, in this case using the $ symbol and the {}, to be able to concatenate texts with variables in a more orderly and elegant way.
+
+
+Example: 
+string MyVar = "Hello World";
+Console.WriteLine($"The message is: {MyVar}."); 
+
+
+
+* "Expression - Bodied Function" - C# V6
+
+It allows us to create features more quickly.
+
+Create a function using the arrow operator, as long as this function has a single action or contains a single line.
+
+
+Example:
+
+public int Sum2Numbers(int x, int y) => (x + y);
+
+This function returns the sum of x and y.
+
+
+
+* "Null Conditional Operator" - C# V6
+
+This operator allows us to check if a property is null when performing an evaluation.
+
+By applying this, we save a "if" and improve the readability of the code.
+
+This is one of the improvements that we will apply within the code.
+
+
+Example:
+
+Datetime? datetime = new DateTime();
+
+//using ? asking if the value is null
+var YearOfDate = datetime?,Year;
+
+Console.WriteLine(YearOfDate);
+
+var YearOfDateCondicional = datetime?.Year ?? 0;
+
+
+
+* "Local Functions" - C# V7
+
+It allows us to create functions inside methods.
+In this way we can structure the code better, if we notice that the code is very large within this method, then we can divide it into small functions.
+
+
+Example :
+
+static void Main(string[] args)
+{
+	int Sum(int x, int y)
+	{
+		return x + y;
+	}
+	Console.WriteLine(Sum(10,20));
+	Console.ReadKey();
+}
+
+
+
+* "Digital Separator" - C# V7
+
+It allows us to use the underscore to separate the characters of a number.
+
+Let's remember that it is not good to have these codes placed as such within the application but it is often necessary to do so. If this scenario occurs we can apply this improvement.
+
+
+Example :
+
+public const long BilliondsAndBillions = 100_000_000_000;
+
+
+
+* "Tuples" - C# V7
+
+It allows us to go back to a combination of different values ​​and different types.
+
+This is very practical when we not only need to return a primitive type but we can return a type composed of several primitive types.
+
+
+Example :
+
+var named = {first: "one", second: "two"};
+
+//Method returning a tuple
+(bool bresult, doublé dcalculation) = Tuples.CalculationTuple();
+
+
+This example returns a bool type and a double type.
+
+
+
+* "Switch as expression" - C# V8
+
+Reduce the syntax of a Switch when its only function is to return a value.
+
+
+Example :
+
+int intValueForSwitch = 0;
+
+var state = (intValueForSwitch) switch
+{
+	(0) => "Zero",
+	(1) => "One",
+	(2) => "Two",
+	_ => "NO valid number"
+};
+
+
+
+* "Top - level statement" - C# V9
+
+It allows us to eliminate that generic structure that we normally have in C#.
+
+
+Example :
+
+//Without apply
+ 
+using System;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			Console.WriteLine("Hello World");
+		}
+	}
+}
+
+//applying the improvement
+
+using System;
+Console.WriteLine("Hello World");
+
+
+
+* "Global Using" - C# V10
+
+It helps us minimize the code since we don't have to write and use all the usage that .NET Core does.
+
+In this way the code automatically detects the sentences.
+
+
+Example :
+
+Console.WriteLine("Hello World!");
+
+
+
+
+Other sources:
+
+https://dev.to/mteheran/c-evolution-3o9o
+https://learn.microsoft.com/es-es/dotnet/csharp/whats-new/csharp-version-history
+https://learn.microsoft.com/es-ES/dotnet/csharp/whats-new/csharp-11
+https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11
