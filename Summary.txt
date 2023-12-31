@@ -498,3 +498,56 @@ https://dev.to/mteheran/c-evolution-3o9o
 https://learn.microsoft.com/es-es/dotnet/csharp/whats-new/csharp-version-history
 https://learn.microsoft.com/es-ES/dotnet/csharp/whats-new/csharp-11
 https://learn.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-11
+
+
+
+
+
+
+
+
+
+------------    String Interpolation, Initializer, and Null Conditional Operator    ------------
+
+In this class we will apply three of the improvements that we learned in the previous class.
+
+Let's go to the code and apply it.
+
+
+
+Let's start with "String Interpolation", this applies whenever text is combined with variables or functions.
+
+An example in our project is the following:
+
+Console.WriteLine("Tarea " + taskToRemove + " eliminada");
+
+Applying the improvement:
+
+Console.WriteLine($"Tarea {taskToRemove} eliminada");
+
+
+
+Another improvement that we can apply is that of the Initializer:
+We can initialize our "TaskList" in a single line.
+
+
+
+Finally we can apply the null conditional operator.
+It is used in those places where it is asked whether a variable is null or not.
+
+Inside "ShowMenuTaskList" we can apply this improvement.
+
+Having :
+
+if (TaskList == null || TaskList.Count == 0){...}
+
+We can modify the condition:
+
+if (TaskList?.Count>0){...}
+
+So the "if" will only be executed if the elements of "TaskList" are greater than zero.
+
+When inverting the conditions we must also invert the "if" and "else" codes.
+
+Other Sources:
+https://code-maze.com/any-vs-count-dotnet/

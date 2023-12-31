@@ -5,7 +5,7 @@ namespace ToDo
 {
     internal class Program
     {
-        public static List<string> TaskList { get; set; }
+        public static List<string> TaskList { get; set; }= new List<string>();//Property Initializer
 
         static void Main(string[] args)
         {
@@ -73,7 +73,7 @@ namespace ToDo
                     {
                         string taskToRemove = TaskList[indexToRemove];
                         TaskList.RemoveAt(indexToRemove);
-                        Console.WriteLine("Tarea " + taskToRemove + " eliminada");
+                        Console.WriteLine($"Tarea {taskToRemove} eliminada");//String Interpolation
                     }
                 }
             }
@@ -108,17 +108,17 @@ namespace ToDo
 
         public static void ShowMenuTaskList()
         {
-            if (TaskList == null || TaskList.Count == 0)
-            {
-                Console.WriteLine("No hay tareas por realizar");
-            }
-            else
+            if (TaskList?.Count>0)//Null Conditional Operator
             {
                 Console.WriteLine("----------------------------------------");
                 var indexTask = 0;
-                TaskList.ForEach(p => Console.WriteLine(++indexTask + ". " + p));
+                TaskList.ForEach(p => Console.WriteLine($"{++indexTask} .  {p}"));//String Interpolation
 
                 Console.WriteLine("----------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("No hay tareas por realizar");
             }
         }
     }
