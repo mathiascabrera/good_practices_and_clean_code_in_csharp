@@ -551,3 +551,45 @@ When inverting the conditions we must also invert the "if" and "else" codes.
 
 Other Sources:
 https://code-maze.com/any-vs-count-dotnet/
+
+
+
+
+
+
+
+
+
+------------    Implementing Minimalism    ------------
+
+To apply the improvements we must update the version of the framework of our project, at the moment the most updated version is 6.0.
+
+Also inside the “Todo.csproj” we must add the following:
+<ImplicitUsings>enable</ImplicitUsings>
+
+This helps us avoid having to place the uses inside the file, C# will detect it automatically. Using this we save several lines of code.
+
+We will no longer need the first lines of the code:
+
+using System;
+using System.Collections.Generic;
+
+Now we can delete it.
+
+
+Regarding namespaces we have two alternatives: One is to completely eliminate the "namespace", we can do this thanks to the "Top Level Statement" improvement. Or we could use an improvement called "static namespace".
+
+Applying "static namespace" instead of having:
+
+namespace ToDo{
+…
+…
+}
+
+we would have:
+
+namespace ToDo;
+
+
+
+Another improvement that we can apply (Top Level Statement) is to eliminate the structure of the "Program" class and the "main" method since our code is an example code and we can execute it from start to finish within the same file.
