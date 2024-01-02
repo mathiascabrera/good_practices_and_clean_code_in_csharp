@@ -1,10 +1,7 @@
-﻿List<string> TaskList = new List<string>();//Property Initializer
+﻿List<string> TaskList = new List<string>();
 
 TaskList = new List<string>();
 int menuSelected = 0;
-
-/* Numbers are usually used to condition, as is our case, numbers are also usually used to perform calculations, for these scenarios the ideal is to use constants with descriptive names.
-For our code, the ideal is that we have an enumeration.  */
 
 do
 {
@@ -23,10 +20,7 @@ do
         ShowMenuTaskList();
     }
 } while ((Menu)menuSelected != Menu.Exit);
-/// <summary>
-/// Show the main menu 
-/// </summary>
-/// <returns>Returns option indicated by user</returns>
+
 int ShowMainMenu()
 {
     Console.WriteLine("----------------------------------------");
@@ -36,7 +30,6 @@ int ShowMainMenu()
     Console.WriteLine("3. Tareas pendientes");
     Console.WriteLine("4. Salir");
 
-    // Read line
     string menuSelected = Console.ReadLine();
     return Convert.ToInt32(menuSelected);
 }
@@ -46,11 +39,9 @@ void ShowMenuRemove()
     try
     {
         Console.WriteLine("Ingrese el número de la tarea a remover: ");
-        // Show current taks
         ShowMenuTaskList();
 
-        //string taskNumberToDelete = Console.ReadLine();
-        // Remove one position
+        // Remove one position because the array starts in 0
         int indexToRemove = Convert.ToInt32(Console.ReadLine()) - 1;
 
         if (indexToRemove > (TaskList.Count - 1) || indexToRemove < 0)
@@ -63,7 +54,7 @@ void ShowMenuRemove()
             {
                 string taskToRemove = TaskList[indexToRemove];
                 TaskList.RemoveAt(indexToRemove);
-                Console.WriteLine($"Tarea {taskToRemove} eliminada");//String Interpolation
+                Console.WriteLine($"Tarea {taskToRemove} eliminada");
             }
         }
     }
@@ -98,11 +89,11 @@ void ShowMenuAdd()
 
 void ShowMenuTaskList()
 {
-    if (TaskList?.Count > 0)//Null Conditional Operator
+    if (TaskList?.Count > 0)
     {
         Console.WriteLine("----------------------------------------");
         var indexTask = 0;
-        TaskList.ForEach(p => Console.WriteLine($"{++indexTask} .  {p}"));//String Interpolation
+        TaskList.ForEach(p => Console.WriteLine($"{++indexTask} .  {p}"));
 
         Console.WriteLine("----------------------------------------");
     }

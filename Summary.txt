@@ -593,3 +593,83 @@ namespace ToDo;
 
 
 Another improvement that we can apply (Top Level Statement) is to eliminate the structure of the "Program" class and the "main" method since our code is an example code and we can execute it from start to finish within the same file.
+
+
+
+
+
+
+
+
+
+------------    Using Comments    ------------
+
+We will learn how to correctly comment our code.
+
+We should not be redundant when commenting.
+
+By having bad comments, the lines of code increase and dirty the readability of the code.
+
+A code must be very easy to understand, so the names of the classes, variables, methods and each component of the system must be descriptive enough so that it is not necessary to add comments.
+
+There are scenarios in which the code becomes somewhat complex to understand and therefore we must comment on its functionality, such as “regular expressions”.
+
+One of the phrases of "Brian Kernighan" maintains that we should not have long comments but rather that we should rewrite the code applying the good practices that we have been learning.
+
+
+Recommendations to comment:
+
+- Don't abuse comments.
+- If the comments are obvious, don't make them.
+- Write easy-to-understand code as a philosophy.
+- Do not comment on the traceability of changes, because Git is in charge of recording changes.
+- Make brief and clear comments.
+- Do not leave commented code.
+
+Let's go to our code!.
+
+The first comment we found is the following:
+
+/// <summary>
+/// Show the main menu 
+/// </summary>
+/// <returns>Returns option indicated by user</returns>
+int ShowMainMenu()
+
+
+The "Show main menu" tells us the same thing, this is a bad comment.
+
+The comment: "//Read line" is also a bad comment because it is obvious what function it is performing.
+
+The same thing happens with "//Show current tasks".
+
+
+
+
+Other sources:
+
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments
+https://www.gitbook.com/
+https://obsidian.md/
+https://herothemes.com/blog/best-documentation-tools/#h-1-heroic-knowledge-base
+
+
+
+
+
+
+
+
+
+------------    Closing of the course    ------------
+
+Final recommendations:
+- Read about good practices.
+- Conduct "code review" among peers, as well as among coworkers.
+- Do refactoring after deploying your code.
+- Use tools that help you clean your code, for example SonarQube.
+- Implement common standards and practices in your company.
+
+
+SonarQube:
+https://www.sonarsource.com/products/sonarqube/?gads_campaign=SQ-Lroi-PMax&gads_ad_group=Global&gads_keyword=&gad_source=1&gclid=CjwKCAiA4smsBhAEEiwAO6DEjcp5YfmY1t1WLiUlW3O4XSbuYEzEH6YiyYICuNrrL63-hd1Tf6Kq-BoCe4EQAvD_BwE
